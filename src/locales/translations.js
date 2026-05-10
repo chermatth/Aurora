@@ -1,0 +1,168 @@
+/* ═══════════════════════════════════════════════════════════
+   src/locales/translations.js — Dicionário PT-BR + EN
+═══════════════════════════════════════════════════════════ */
+
+export const TRANSLATIONS = {
+
+  /* ══════════════════════════ PORTUGUÊS ══════════════════════════ */
+  'pt-BR': {
+    nav: {
+      placeholder:  '🔍  Digite uma cidade...',
+      searchBtn:    'Buscar',
+      tipUnit:      'Alternar unidade de temperatura',
+      tipThemeDark: 'Tema claro',
+      tipThemeLight:'Tema escuro',
+      tipLang:      'Alternar idioma',
+    },
+    states: {
+      loadingClima: 'Buscando dados do clima…',
+      retryHint:    'Verifique o nome da cidade e tente novamente.',
+    },
+    cards: {
+      secLabel:    '☁ Condições atuais',
+      temperature: 'Temperatura',
+      humidity:    'Umidade',
+      wind:        'Vento',
+      visibility:  'Visibilidade',
+      feelsLike:   'Sensação',
+      dewPoint:    'Ponto de orvalho',
+      direction:   'Direção',
+      pressure:    'Pressão',
+    },
+    forecast: {
+      title:    '📈 Temperatura — próximos 5 dias',
+      tempLeg:  'Temp',
+    },
+    news: {
+      title:   '📰 Notícias Climáticas',
+      loading: 'Carregando notícias…',
+      empty:   'Nenhuma notícia nesta categoria no momento.',
+      open:    '↗ abrir notícia',
+      load404: 'Não foi possível carregar as notícias no momento.',
+      categories: {
+        all:      '🌐 Todas',
+        rain:     '🌧️ Chuva',
+        heat:     '🌡️ Calor',
+        cold:     '❄️ Frio',
+        wind:     '💨 Vento',
+        disaster: '⚠️ Desastres',
+        fire:     '🔥 Incêndios',
+      },
+      timeAgo: {
+        now: 'agora',
+        min: 'há {n}min',
+        h:   'há {n}h',
+        d:   'há {n}d',
+      },
+    },
+    map: {
+      title: '🗺️ Mapa Climático Mundial',
+      hint:  '💡 Clique em qualquer ponto do mapa para atualizar o clima',
+    },
+    days:    ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],
+    windDir: ['N','NE','L','SE','S','SO','O','NO'],
+    wmo: {
+      0: 'Céu limpo',         1: 'Majoritariamente claro', 2: 'Parcialmente nublado', 3: 'Nublado',
+      45:'Neblina',           48:'Neblina com geada',
+      51:'Garoa leve',        53:'Garoa moderada',         55:'Garoa forte',
+      61:'Chuva leve',        63:'Chuva moderada',         65:'Chuva forte',
+      71:'Neve leve',         73:'Neve moderada',          75:'Neve forte',          77:'Grãos de neve',
+      80:'Pancadas leves',    81:'Pancadas moderadas',     82:'Pancadas fortes',
+      85:'Neve em pancadas',  86:'Neve em pancadas forte',
+      95:'Trovoada',          96:'Trovoada com granizo',   99:'Trovoada com granizo forte',
+      default:'Condições variadas',
+    },
+    locationFallback: 'Local',
+    apiErr: {
+      cityNotFound:   (c) => `Cidade "${c}" não encontrada.`,
+      coordsInvalid:  'Coordenadas inválidas.',
+      coordsOutBox:   'Coordenadas fora da área coberta pela API.',
+      meteo:          (s) => `Open-Meteo falhou (${s}).`,
+      forecast:       (s) => `Erro ao buscar previsão (${s}).`,
+      geocode:        'Geocoding falhou.',
+      geocodeReverso: 'Geocoding reverso falhou.',
+    },
+    dateLocale: 'pt-BR',
+  },
+
+  /* ══════════════════════════ ENGLISH ════════════════════════════ */
+  'en': {
+    nav: {
+      placeholder:  '🔍  Type a city...',
+      searchBtn:    'Search',
+      tipUnit:      'Toggle temperature unit',
+      tipThemeDark: 'Light theme',
+      tipThemeLight:'Dark theme',
+      tipLang:      'Toggle language',
+    },
+    states: {
+      loadingClima: 'Fetching weather data…',
+      retryHint:    'Check the city name and try again.',
+    },
+    cards: {
+      secLabel:    '☁ Current conditions',
+      temperature: 'Temperature',
+      humidity:    'Humidity',
+      wind:        'Wind',
+      visibility:  'Visibility',
+      feelsLike:   'Feels like',
+      dewPoint:    'Dew point',
+      direction:   'Direction',
+      pressure:    'Pressure',
+    },
+    forecast: {
+      title:   '📈 Temperature — next 5 days',
+      tempLeg: 'Temp',
+    },
+    news: {
+      title:   '📰 Climate News',
+      loading: 'Loading news…',
+      empty:   'No news in this category at the moment.',
+      open:    '↗ open article',
+      load404: 'Unable to load news at the moment.',
+      categories: {
+        all:      '🌐 All',
+        rain:     '🌧️ Rain',
+        heat:     '🌡️ Heat',
+        cold:     '❄️ Cold',
+        wind:     '💨 Wind',
+        disaster: '⚠️ Disasters',
+        fire:     '🔥 Wildfires',
+      },
+      timeAgo: {
+        now: 'now',
+        min: '{n}min ago',
+        h:   '{n}h ago',
+        d:   '{n}d ago',
+      },
+    },
+    map: {
+      title: '🗺️ World Weather Map',
+      hint:  '💡 Click anywhere on the map to update the weather',
+    },
+    days:    ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+    windDir: ['N','NE','E','SE','S','SW','W','NW'],
+    wmo: {
+      0: 'Clear sky',         1: 'Mainly clear',           2: 'Partly cloudy',         3: 'Overcast',
+      45:'Fog',               48:'Fog with frost',
+      51:'Light drizzle',     53:'Moderate drizzle',       55:'Heavy drizzle',
+      61:'Light rain',        63:'Moderate rain',          65:'Heavy rain',
+      71:'Light snow',        73:'Moderate snow',          75:'Heavy snow',            77:'Snow grains',
+      80:'Light showers',     81:'Moderate showers',       82:'Heavy showers',
+      85:'Snow showers',      86:'Heavy snow showers',
+      95:'Thunderstorm',      96:'Thunderstorm with hail', 99:'Severe thunderstorm with hail',
+      default:'Mixed conditions',
+    },
+    locationFallback: 'Location',
+    apiErr: {
+      cityNotFound:   (c) => `City "${c}" not found.`,
+      coordsInvalid:  'Invalid coordinates.',
+      coordsOutBox:   'Coordinates outside the API coverage area.',
+      meteo:          (s) => `Open-Meteo failed (${s}).`,
+      forecast:       (s) => `Failed to fetch forecast (${s}).`,
+      geocode:        'Geocoding failed.',
+      geocodeReverso: 'Reverse geocoding failed.',
+    },
+    dateLocale: 'en-US',
+  },
+}
