@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// ─── Troque 'aurora' pelo nome exato do seu repositório no GitHub ───
+// ─── Nome do repositório no GitHub (deve bater com a URL do Pages) ───
 const REPO_NAME = 'aurora'
 
-export default defineConfig({
+// Usa `command` (build vs serve) — mais confiável que process.env.NODE_ENV no Windows
+export default defineConfig(({ command }) => ({
   plugins: [vue()],
 
-  // base garante que os caminhos funcionem no GitHub Pages
-  base: process.env.NODE_ENV === 'production' ? `/${REPO_NAME}/` : '/',
-})
+  // Em build → `/aurora/` para funcionar no GitHub Pages
+  // Em dev   → `/`        para funcionar no localhost
+  base: command === 'build' ? `/${REPO_NAME}/` : '/',
+}))
