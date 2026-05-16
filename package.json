@@ -8,9 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
-
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.105.4",
     "chart.js": "^4.5.1",
     "chat.js": "^1.0.2",
     "leaflet": "^1.9.4",
